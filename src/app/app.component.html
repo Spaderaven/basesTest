@@ -1,0 +1,31 @@
+<!-- landing-page.component.html -->
+<div class="landing-banner">
+  <h1>Liga Leones Negros</h1>
+  <div class="buttons">
+    <button class="btn">Crear Evento</button>
+    <button class="btn">Unirme a un Torneo</button>
+  </div>
+</div>
+
+<div class="page-content">
+  <h2>Games</h2>
+  <div class="slider">
+    <div class="card" *ngFor="let game of games">
+      <img [src]="game.imageUrl" alt="{{ game.title }}" />
+      <img src="..\assets\Tekken.jpg" alt="">
+      <h3>{{ game.title }}</h3>
+      <p>{{ game.description }}</p>
+    </div>
+  </div>
+
+  <h2>Tournaments</h2>
+  <div class="slider">
+    <div class="card" *ngFor="let tournament of tournaments">
+      <img [src]="tournament.imageUrl" alt="{{ tournament.title }}" />
+      <h3>{{ tournament.title }}</h3>
+      <p>{{ tournament.game }}</p>
+      <p>Date: {{ tournament.date }}</p>
+    </div>
+  </div>
+
+</div>
